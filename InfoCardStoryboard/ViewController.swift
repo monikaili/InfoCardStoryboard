@@ -38,8 +38,10 @@ class ViewController: UIViewController {
         nameLabel.text = "Mon Ili"
         positionLabel.text = "Junior iOS dev"
       
-        
-        
+        phoneLabel.titleLabel?.text = "+123 456 789"
+        phoneLabel.titleLabel?.textColor = .white
+        emailLabel.titleLabel?.text = "mon@ili.com"
+        emailLabel.titleLabel?.textColor = .white
     }
   
         
@@ -61,19 +63,19 @@ class ViewController: UIViewController {
     
     @IBAction func emailButton(_ sender: UIButton) {
         
-        
-        
         let emailSend = "mon@ili.com"
         if let url = URL(string: "mailto:\(emailSend)") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
         
-        
+        sender.setTitle("mon@ili.com", for: .normal)
+        sender.setTitleColor(UIColor.white, for: .normal)
         
     }
     @IBAction func phoneNumber(_ sender: UIButton) {
         
-        
+        sender.setTitle("+123 456 789", for: .normal)
+        sender.setTitleColor(UIColor.white, for: .normal)
     }
     
 }
