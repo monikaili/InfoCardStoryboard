@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="u39-Gp-RMt">
-                                <rect key="frame" x="0.0" y="59" width="403" height="693"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Hw-UK-hIQ">
+                                <rect key="frame" x="0.0" y="47" width="403" height="622"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAw-M6-aoD">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAw-M6-aoD">
                                         <rect key="frame" x="0.0" y="0.0" width="403" height="343"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monika" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-gE-nhA">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="monika" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-gE-nhA">
                                                 <rect key="frame" x="101.66666666666669" y="71.666666666666686" width="200" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="rhZ-w5-zzh"/>
@@ -35,11 +36,11 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="403" id="73j-0o-zNX"/>
                                             <constraint firstItem="mwo-gE-nhA" firstAttribute="centerY" secondItem="bAw-M6-aoD" secondAttribute="centerY" id="ZhZ-XT-i8L"/>
-                                            <constraint firstAttribute="height" constant="343" id="o5Q-dt-DZV"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="343" id="fcY-le-rgk"/>
                                             <constraint firstItem="mwo-gE-nhA" firstAttribute="centerX" secondItem="bAw-M6-aoD" secondAttribute="centerX" id="u5g-XI-Usb"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEm-av-wL2">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vEm-av-wL2">
                                         <rect key="frame" x="0.0" y="343" width="403" height="159"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ovb-MH-KpH">
@@ -67,22 +68,19 @@
                                             <constraint firstAttribute="height" constant="159" id="VUe-Wd-NAS"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-f8-SXA">
-                                        <rect key="frame" x="0.0" y="502" width="403" height="191"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-f8-SXA">
+                                        <rect key="frame" x="0.0" y="502" width="403" height="60"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hmq-f1-UeW">
-                                                <rect key="frame" x="165.66666666666666" y="35" width="72" height="88.666666666666657"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zCL-WT-Jc0">
+                                                <rect key="frame" x="156" y="13" width="91.666666666666657" height="34.333333333333336"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5V-jc-8Hs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="34.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="phone"/>
-                                                        <connections>
-                                                            <action selector="phoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2M-0Z-Jcj"/>
-                                                        </connections>
-                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q37-yz-PT8">
+                                                        <rect key="frame" x="0.0" y="2.3333333333333304" width="22.333333333333332" height="30.333333333333343"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <imageReference key="image" image="envelope.fill" catalog="system" symbolScale="default"/>
+                                                    </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlM-ru-9Sf">
-                                                        <rect key="frame" x="0.0" y="54.333333333333371" width="72" height="34.333333333333343"/>
+                                                        <rect key="frame" x="27.333333333333343" y="0.0" width="64.333333333333329" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="email"/>
                                                         <connections>
@@ -94,37 +92,52 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="191" id="Mzi-60-wB0"/>
-                                            <constraint firstItem="hmq-f1-UeW" firstAttribute="centerX" secondItem="hFw-f8-SXA" secondAttribute="centerX" id="sd9-qc-p0j"/>
-                                            <constraint firstAttribute="width" constant="403" id="svj-wg-kiE"/>
+                                            <constraint firstItem="zCL-WT-Jc0" firstAttribute="centerX" secondItem="hFw-f8-SXA" secondAttribute="centerX" id="YrH-27-rIE"/>
+                                            <constraint firstAttribute="height" constant="60" id="g8p-Sg-eHa"/>
+                                            <constraint firstAttribute="width" constant="403" id="ubj-Vf-U6v"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f78-sG-z66">
+                                        <rect key="frame" x="0.0" y="562" width="403" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IZ8-oa-6a0">
+                                                <rect key="frame" x="153" y="13" width="96.666666666666657" height="34.333333333333336"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1my-tc-eG7">
+                                                        <rect key="frame" x="0.0" y="1.6666666666666643" width="19.666666666666668" height="31.666666666666671"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <imageReference key="image" image="phone.fill" catalog="system" symbolScale="default"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5V-jc-8Hs">
+                                                        <rect key="frame" x="24.666666666666657" y="0.0" width="72" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="phone"/>
+                                                        <connections>
+                                                            <action selector="phoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2M-0Z-Jcj"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="BRM-vH-dcg"/>
+                                            <constraint firstItem="IZ8-oa-6a0" firstAttribute="centerX" secondItem="f78-sG-z66" secondAttribute="centerX" id="onA-S6-aVi"/>
+                                            <constraint firstAttribute="width" constant="403" id="t4K-if-ZWx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="hFw-f8-SXA" firstAttribute="top" secondItem="vEm-av-wL2" secondAttribute="bottom" id="Nnn-NH-8qm"/>
-                                    <constraint firstItem="hFw-f8-SXA" firstAttribute="leading" secondItem="u39-Gp-RMt" secondAttribute="leading" id="RBC-m8-AbJ"/>
-                                    <constraint firstItem="bAw-M6-aoD" firstAttribute="top" secondItem="u39-Gp-RMt" secondAttribute="top" id="UGH-UI-FM1"/>
-                                    <constraint firstItem="bAw-M6-aoD" firstAttribute="leading" secondItem="u39-Gp-RMt" secondAttribute="leading" id="Wb7-M7-XwF"/>
-                                    <constraint firstAttribute="trailing" secondItem="vEm-av-wL2" secondAttribute="trailing" id="Weo-K7-MNJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="hFw-f8-SXA" secondAttribute="trailing" id="ZJV-Jm-koR"/>
-                                    <constraint firstItem="vEm-av-wL2" firstAttribute="leading" secondItem="u39-Gp-RMt" secondAttribute="leading" id="fkc-qW-OFj"/>
-                                    <constraint firstItem="bAw-M6-aoD" firstAttribute="trailing" secondItem="u39-Gp-RMt" secondAttribute="trailingMargin" id="gfS-DA-eek"/>
-                                    <constraint firstItem="vEm-av-wL2" firstAttribute="top" secondItem="bAw-M6-aoD" secondAttribute="bottom" id="hIh-j9-H0s"/>
-                                    <constraint firstAttribute="trailing" secondItem="bAw-M6-aoD" secondAttribute="trailing" id="p04-Xz-Zwg"/>
-                                    <constraint firstItem="vEm-av-wL2" firstAttribute="centerX" secondItem="u39-Gp-RMt" secondAttribute="centerX" id="pea-xw-xEN"/>
-                                    <constraint firstItem="hFw-f8-SXA" firstAttribute="centerX" secondItem="u39-Gp-RMt" secondAttribute="centerX" id="sXA-CV-haU"/>
-                                    <constraint firstAttribute="bottom" secondItem="hFw-f8-SXA" secondAttribute="bottom" id="t6U-LC-9xe"/>
-                                    <constraint firstItem="bAw-M6-aoD" firstAttribute="leading" secondItem="u39-Gp-RMt" secondAttribute="leadingMargin" id="zzs-W5-avW"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                     </view>
                     <connections>
+                        <outlet property="emailImage" destination="Q37-yz-PT8" id="Gaj-MY-xKe"/>
                         <outlet property="emailLabel" destination="LlM-ru-9Sf" id="Jmh-me-TQt"/>
                         <outlet property="image" destination="mwo-gE-nhA" id="ivc-RN-Pn3"/>
                         <outlet property="nameLabel" destination="w4a-Gz-fmh" id="I5e-Cy-6cW"/>
+                        <outlet property="phoneImage" destination="1my-tc-eG7" id="Wyj-5n-c7H"/>
                         <outlet property="phoneLabel" destination="H5V-jc-8Hs" id="qRi-P9-vSS"/>
                         <outlet property="positionLabel" destination="AlX-Nd-wSw" id="fz6-Z5-jo6"/>
                     </connections>
@@ -135,7 +148,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="monika" width="1157" height="1158"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

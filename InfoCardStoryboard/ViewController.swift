@@ -23,7 +23,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UIButton!
     
+    @IBOutlet weak var emailImage: UIImageView!
     
+    @IBOutlet weak var phoneImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,8 +37,8 @@ class ViewController: UIViewController {
     
         nameLabel.text = "Mon Ili"
         positionLabel.text = "Junior iOS dev"
-        setUpPhone()
-        setUpEmail()
+      
+        
         
     }
   
@@ -55,52 +57,20 @@ class ViewController: UIViewController {
         
     }
     
-    func setUpPhone() {
-        
-        let phone = phoneLabel
-        
-        let imageAttachment = NSTextAttachment()
-        imageAttachment.image = UIImage(systemName: "phone.fill")
-
-        // If you want to enable Color in the SF Symbols.
-        imageAttachment.image = UIImage(systemName: "phone.fill")?.withTintColor(.white)
-
-        let fullString = NSMutableAttributedString(string: "Phone ")
-        fullString.append(NSAttributedString(attachment: imageAttachment))
-        fullString.append(NSAttributedString(string: ": +123 456 789"))
-        phone?.titleLabel?.attributedText = fullString
-        phone?.titleLabel?.textColor = .white
-        
-        
-    }
-    
-    func setUpEmail() {
-       let email = emailLabel
-        
-        let imageAttachment = NSTextAttachment()
-        imageAttachment.image = UIImage(systemName: "envelope.fill")
-
-        // If you want to enable Color in the SF Symbols.
-        imageAttachment.image = UIImage(systemName: "envelope.fill")?.withTintColor(.white)
-
-        let fullString = NSMutableAttributedString(string: "Email ")
-        fullString.append(NSAttributedString(attachment: imageAttachment))
-        fullString.append(NSAttributedString(string: ": mon@ili.com"))
-        email?.titleLabel?.attributedText = fullString
-        email?.titleLabel?.textColor = .white
-        
-    }
     
     
     @IBAction func emailButton(_ sender: UIButton) {
         
-        let email = "mon@ili.com"
-        if let url = URL(string: "mailto:\(email)") {
-           UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        
+        
+        let emailSend = "mon@ili.com"
+        if let url = URL(string: "mailto:\(emailSend)") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-    
+        
+        
+        
     }
-    
     @IBAction func phoneNumber(_ sender: UIButton) {
         
         
