@@ -71,7 +71,7 @@
                                         <rect key="frame" x="0.0" y="502" width="403" height="191"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hmq-f1-UeW">
-                                                <rect key="frame" x="165.66666666666666" y="35" width="72" height="88.666666666666671"/>
+                                                <rect key="frame" x="165.66666666666666" y="35" width="72" height="88.666666666666657"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5V-jc-8Hs">
                                                         <rect key="frame" x="0.0" y="0.0" width="72" height="34.333333333333336"/>
@@ -122,8 +122,10 @@
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="LlM-ru-9Sf" id="Jmh-me-TQt"/>
                         <outlet property="image" destination="mwo-gE-nhA" id="ivc-RN-Pn3"/>
                         <outlet property="nameLabel" destination="w4a-Gz-fmh" id="I5e-Cy-6cW"/>
+                        <outlet property="phoneLabel" destination="H5V-jc-8Hs" id="qRi-P9-vSS"/>
                         <outlet property="positionLabel" destination="AlX-Nd-wSw" id="fz6-Z5-jo6"/>
                     </connections>
                 </viewController>
